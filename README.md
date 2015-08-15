@@ -12,10 +12,10 @@ git clone https://github.com/jeandamore/keydam.git
 
 ```
 cd keydam
-make clean
-make
-sudo ./main.exe
+./run.sh -v -f 
 ```
+-v for verbose (will print to stdout as well)
+-r for randomise (will wait between 10 and 100 ms before propagating the event)
 
 *Run the keypress visualiser*
 
