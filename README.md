@@ -1,4 +1,4 @@
-**Keyboard Pressing Anynomisation**
+**Keyboard Pressing Anonymisation**
 
 *Installation*
 
