@@ -14,3 +14,11 @@ make clean
 make
 sudo ./main.exe
 ```
+
+*Monitor the log*
+
+```
+cd keydam
+tail -f keydam.log
+```
+

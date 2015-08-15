@@ -6,8 +6,9 @@
 
 CGEventRef eventTapCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon) 
 {
-	char timeString[26];
- 	printf("%u,%ld\n", (uint32_t)type, sysTimeInMillis());
+  	FILE *file = fopen("keydam.log", "a");
+    fprintf(file, "%u,%ld\n", (uint32_t)type, sysTimeInMillis());
+    fflush(file);
  	return event; 
 }
 
