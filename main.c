@@ -6,7 +6,7 @@
 
 CGEventRef eventTapCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon) 
 {
-  	FILE *file = fopen("keydam.log", "a");
+  	FILE *file = fopen("keydam.csv", "a");
     fprintf(file, "%u,%llx,%ld\n", (uint32_t)type,CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode), sysTimeInMillis());
     fflush(file);
  	return event; 
