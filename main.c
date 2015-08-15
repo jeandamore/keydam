@@ -103,19 +103,26 @@ int readFlags(int argc, char* const* argv)
 	return 0;
 }
 
+FILE* openOutputFile() {
+
+	char dateTimeString[14];
+	char fileName[256];
+
+	sysTimeAsString(dateTimeString);
+	snprintf(fileName, sizeof fileName, "%s%s%s", "keydam-", dateTimeString, ".csv");
+	return fopen(fileName, "a");
+}
+
 
 int main (int argc, char* const* argv) 
 {
-	CFRunLoopSourceRef runLoopSource; 
-	CFMachPortRef eventTap;
-	file = fopen("keydam.csv", "a");
-
 	int rcode = readFlags(argc, argv);
 	if(rcode != 0 ) {
 		return 1;
 	}
 	else 
-	{
+	{	
+		file = openOutputFile();
 		CFMachPortRef eventTaps[2];
 		eventTaps[0] = registerEventTap(loggingEventTapCallback);
 		eventTaps[1] = registerEventTap(randomisingFlagEventTapCallback);

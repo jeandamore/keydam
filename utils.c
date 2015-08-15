@@ -28,7 +28,7 @@ void sysTimeAsString(char* timeString)
   time(&timer);
   tm_info = localtime(&timer);
 
-	strftime (timeString, 100, "%Y-%m-%d %H:%M:%S.000", tm_info);
+	strftime (timeString, 100, "%Y%m%d%H%M%S", tm_info);
 }
 
 long sysTimeInMillis() {
