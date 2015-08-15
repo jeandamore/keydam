@@ -22,8 +22,7 @@ sudo ./main.exe
 
 ```
 cd keydam
-./visu.sh
-open keydam.pdf
+./plot.sh
 ```
 
 *Monitor the log (optional)*
