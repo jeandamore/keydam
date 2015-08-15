@@ -1,2 +1,6 @@
+.DS_STORE
+.RData
 *.exe
 *.o
+*.pdf
+*.csv
