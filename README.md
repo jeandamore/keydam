@@ -3,22 +3,32 @@
 *Installation*
 
 ```
+brew tap homebrew/science 
+brew install r
+brew install watch
 git clone https://github.com/jeandamore/keydam.git
+```
+
+*Run the keypress logger*
+
+```
 cd keydam
-```
-
-*Run the app*
-
-```
 make clean
 make
 sudo ./main.exe
 ```
 
-*Monitor the log*
+*Run the keypress visualiser*
 
 ```
 cd keydam
-tail -f keydam.log
+./visu.sh
+open keydam.pdf
 ```
 
+*Monitor the log (optional)*
+
+```
+cd keydam
+tail -f keydam.csv
+```

@@ -1,0 +1,1 @@
+watch -n 2 -d ./plot.sh
