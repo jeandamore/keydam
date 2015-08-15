@@ -5,7 +5,6 @@
 ```
 brew tap homebrew/science 
 brew install r
-brew install watch
 git clone https://github.com/jeandamore/keydam.git
 ```
 
