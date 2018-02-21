@@ -12,7 +12,7 @@ git clone https://github.com/jeandamore/keydam.git
 
 ```
 cd keydam
-./run.sh -v -f 
+./run.sh -v -r 
 ```
 -v for verbose (will print to stdout as well)
 -r for randomise (will wait between 10 and 100 ms before propagating the event)
